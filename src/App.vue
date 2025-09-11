@@ -80,6 +80,33 @@
         </div>
       </div>
     </main>
+    
+    <!-- 页脚区域 -->
+    <footer class="footer">
+      <div class="footer-content">
+        <p class="footer-text">
+          开源项目 · 
+          <a 
+            href="https://github.com/498330580/yaoling-index" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            class="footer-link"
+          >
+            GitHub
+          </a>
+        </p>
+        <p class="footer-text beian-info">
+          <a 
+            href="https://beian.miit.gov.cn" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            class="footer-link beian-link"
+          >
+            渝ICP备2025058708号-2
+          </a>
+        </p>
+      </div>
+    </footer>
   </div>
 </template>
 
@@ -483,6 +510,69 @@ export default {
   
   .card-description {
     font-size: 0.85rem;
+  }
+}
+
+/* Footer styles */
+.footer {
+  margin-top: 3rem;
+  padding: 2rem 0;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  text-align: center;
+}
+
+.footer-text {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.footer-link {
+  color: #64b5f6;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.footer-link:hover {
+  color: #90caf9;
+  text-decoration: underline;
+}
+
+/* Beian info styles */
+.beian-info {
+  margin-top: 0.5rem;
+}
+
+.beian-link {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.85rem;
+}
+
+.beian-link:hover {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+@media (max-width: 768px) {
+  .footer {
+    margin-top: 2rem;
+    padding: 1.5rem 0;
+  }
+  
+  .footer-text {
+    font-size: 0.85rem;
+  }
+  
+  .beian-link {
+    font-size: 0.8rem;
   }
 }
 </style>
