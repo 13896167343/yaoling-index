@@ -29,8 +29,10 @@
 │   └── favicon.svg              # 网站图标
 ├── src/
 │   ├── components/
-│   │   ├── NavigationSidebar.vue # 左侧导航栏组件
-│   │   └── ContentDisplay.vue    # 右侧内容显示组件
+│   │   ├── NavigationSidebar.vue # 左侧导航栏组件（已弃用）
+│   │   └── ContentDisplay.vue    # 右侧内容显示组件（已弃用）
+│   ├── data/
+│   │   └── websites.js          # 网站数据配置文件
 │   ├── App.vue                  # 主应用组件
 │   ├── main.js                  # 应用入口文件
 │   └── style.css                # 全局样式文件
