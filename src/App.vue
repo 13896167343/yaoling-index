@@ -87,21 +87,22 @@
         <p class="footer-text">
           开源项目 · 
           <a 
-            href="https://github.com/498330580/yaoling-index" 
+            href="https://github.com/yaoyaochil/yaoyao-nav" 
             target="_blank" 
             rel="noopener noreferrer"
             class="footer-link"
           >
             GitHub
           </a>
-          <span class="footer-separator"> | </span>
+          <span v-if="icpNumber" class="footer-separator"> | </span>
           <a 
-            href="https://beian.miit.gov.cn" 
+            v-if="icpNumber"
+            href="https://beian.miit.gov.cn/" 
             target="_blank" 
             rel="noopener noreferrer"
             class="footer-link beian-link"
           >
-            渝ICP备2025058708号-2
+            {{ icpNumber }}
           </a>
         </p>
       </div>
@@ -123,7 +124,9 @@ export default {
       // 搜索关键词
       searchQuery: '',
       // 网站列表数据
-      websites
+      websites,
+      // ICP备案号
+       icpNumber: import.meta.env.VITE_ICP_NUMBER || ''
     }
   },
   computed: {
@@ -545,6 +548,7 @@ export default {
   color: #90caf9;
   text-decoration: underline;
 }
+
 
 /* Footer separator and beian styles */
 .footer-separator {

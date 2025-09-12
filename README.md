@@ -44,6 +44,27 @@
 └── README.md                    # 项目说明文档
 ```
 
+## ⚙️ 环境变量配置
+
+项目支持通过环境变量配置ICP备案信息：
+
+1. 复制 `.env.example` 文件为 `.env`：
+   ```bash
+   cp .env.example .env
+   ```
+
+2. 编辑 `.env` 文件，设置ICP备案号：
+   ```env
+   VITE_ICP_NUMBER=你的ICP备案号
+   ```
+
+3. 如果不设置 `VITE_ICP_NUMBER` 环境变量，页面底部将只显示GitHub开源链接
+
+**注意**: 
+- 环境变量必须以 `VITE_` 开头才能在Vite应用中使用
+- 修改环境变量后需要重启开发服务器
+- 生产环境部署时，需要在Cloudflare Pages中配置相应的环境变量
+
 ## 🛠️ 开发环境
 
 ### 环境要求
