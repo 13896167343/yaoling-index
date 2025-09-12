@@ -94,8 +94,7 @@
           >
             GitHub
           </a>
-        </p>
-        <p class="footer-text beian-info">
+          <span class="footer-separator"> | </span>
           <a 
             href="https://beian.miit.gov.cn" 
             target="_blank" 
@@ -354,15 +353,15 @@ export default {
 /* 网站卡片网格 */
 .websites-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1rem;
   margin-top: 1rem;
 }
 
 .website-card {
   background: rgba(255, 255, 255, 0.95);
-  border-radius: 12px;
-  padding: 1.5rem;
+  border-radius: 10px;
+  padding: 1rem;
   cursor: pointer;
   transition: all 0.3s ease;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
@@ -376,10 +375,10 @@ export default {
 }
 
 .card-icon {
-  width: 48px;
-  height: 48px;
-  margin-bottom: 1rem;
-  border-radius: 8px;
+  width: 36px;
+  height: 36px;
+  margin-bottom: 0.75rem;
+  border-radius: 6px;
   overflow: hidden;
   background: #f5f5f5;
   display: flex;
@@ -394,20 +393,20 @@ export default {
 }
 
 .card-content {
-  margin-bottom: 1rem;
+  margin-bottom: 0.75rem;
 }
 
 .card-title {
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: 600;
   color: #333;
-  margin: 0 0 0.5rem;
+  margin: 0 0 0.375rem;
 }
 
 .card-description {
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   color: #666;
-  line-height: 1.5;
+  line-height: 1.4;
   margin: 0;
   display: -webkit-box;
   -webkit-line-clamp: 2;
@@ -422,9 +421,9 @@ export default {
 }
 
 .action-btn {
-  padding: 0.5rem;
+  padding: 0.375rem;
   border: none;
-  border-radius: 6px;
+  border-radius: 5px;
   background: rgba(30, 60, 114, 0.1);
   color: #1e3c72;
   cursor: pointer;
@@ -462,12 +461,12 @@ export default {
   }
   
   .websites-grid {
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 1rem;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 0.875rem;
   }
   
   .website-card {
-    padding: 1.25rem;
+    padding: 0.875rem;
   }
 }
 
@@ -497,19 +496,19 @@ export default {
   
   .websites-grid {
     grid-template-columns: 1fr;
-    gap: 0.875rem;
+    gap: 0.75rem;
   }
   
   .website-card {
-    padding: 1rem;
+    padding: 0.75rem;
   }
   
   .card-title {
-    font-size: 1rem;
+    font-size: 0.95rem;
   }
   
   .card-description {
-    font-size: 0.85rem;
+    font-size: 0.8rem;
   }
 }
 
@@ -547,9 +546,10 @@ export default {
   text-decoration: underline;
 }
 
-/* Beian info styles */
-.beian-info {
-  margin-top: 0.5rem;
+/* Footer separator and beian styles */
+.footer-separator {
+  color: rgba(255, 255, 255, 0.5);
+  margin: 0 0.5rem;
 }
 
 .beian-link {
