@@ -46,22 +46,30 @@
 
 ## ⚙️ 环境变量配置
 
-项目支持通过环境变量配置ICP备案信息：
+项目支持通过环境变量配置ICP备案信息和大陆域名功能：
 
 1. 复制 `.env.example` 文件为 `.env`：
    ```bash
    cp .env.example .env
    ```
 
-2. 编辑 `.env` 文件，设置ICP备案号：
+2. 编辑 `.env` 文件，设置环境变量：
    ```env
+   # ICP备案号（可选）
    VITE_ICP_NUMBER=你的ICP备案号
+   
+   # 大陆域名（可选）
+   VITE_MAINLAND_DOMAIN=你的大陆域名
    ```
 
-3. 如果不设置 `VITE_ICP_NUMBER` 环境变量，页面底部将只显示GitHub开源链接
+**功能说明：**
+- **ICP备案信息**：设置 `VITE_ICP_NUMBER` 后可在页面底部显示备案信息
+- **大陆域名功能**：设置 `VITE_MAINLAND_DOMAIN` 后，访问该域名时只显示备案信息，不显示GitHub信息；访问其他域名时只显示GitHub信息
 
 **注意**: 
 - 环境变量必须以 `VITE_` 开头才能在Vite应用中使用
+- 如果不设置任何环境变量，页面底部将只显示GitHub开源链接
+- 大陆域名功能需要同时设置 `VITE_ICP_NUMBER` 和 `VITE_MAINLAND_DOMAIN`
 - 修改环境变量后需要重启开发服务器
 - 生产环境部署时，需要在Cloudflare Pages中配置相应的环境变量
 

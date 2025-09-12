@@ -85,25 +85,29 @@
     <footer class="footer">
       <div class="footer-content">
         <p class="footer-text">
-          开源项目 · 
-          <a 
-            href="https://github.com/yaoyaochil/yaoyao-nav" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            class="footer-link"
-          >
-            GitHub
-          </a>
-          <span v-if="icpNumber" class="footer-separator"> | </span>
-          <a 
-            v-if="icpNumber"
-            href="https://beian.miit.gov.cn/" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            class="footer-link beian-link"
-          >
-            {{ icpNumber }}
-          </a>
+          <!-- 大陆域名只显示备案信息 -->
+          <template v-if="isMainlandDomain && icpNumber">
+            <a 
+              href="https://beian.miit.gov.cn/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              class="footer-link beian-link"
+            >
+              {{ icpNumber }}
+            </a>
+          </template>
+          <!-- 非大陆域名显示GitHub信息 -->
+          <template v-else>
+            开源项目 · 
+            <a 
+              href="https://github.com/yaoyaochil/yaoyao-nav" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              class="footer-link"
+            >
+              GitHub
+            </a>
+          </template>
         </p>
       </div>
     </footer>
@@ -126,7 +130,19 @@ export default {
       // 网站列表数据
       websites,
       // ICP备案号
-       icpNumber: import.meta.env.VITE_ICP_NUMBER || ''
+       icpNumber: import.meta.env.VITE_ICP_NUMBER || '',
+       // 大陆域名
+       mainlandDomain: import.meta.env.VITE_MAINLAND_DOMAIN || '',
+       // 当前是否为大陆域名
+       isMainlandDomain: false
+    }
+  },
+  mounted() {
+    // Check if current domain is mainland domain
+    // 检测当前域名是否为大陆域名
+    if (this.mainlandDomain) {
+      const currentDomain = window.location.hostname;
+      this.isMainlandDomain = currentDomain === this.mainlandDomain;
     }
   },
   computed: {
