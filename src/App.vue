@@ -85,21 +85,33 @@
     <footer class="footer">
       <div class="footer-content">
         <p class="footer-text">
-          <!-- 大陆域名访问时的显示逻辑 -->
-          <template v-if="isMainlandDomain">
-            <!-- 如果有备案号则显示备案信息 -->
-            <a 
-              v-if="icpNumber"
-              href="https://beian.miit.gov.cn/" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              class="footer-link beian-link"
-            >
-              {{ icpNumber }}
-            </a>
-            <!-- 没有备案号时不显示任何内容 -->
+          <!-- 当同时设置了备案号和大陆域名时的显示逻辑 -->
+          <template v-if="icpNumber && mainlandDomain">
+            <!-- 访问大陆域名时只显示备案信息 -->
+            <template v-if="isMainlandDomain">
+              <a 
+                href="https://beian.miit.gov.cn/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                class="footer-link beian-link"
+              >
+                {{ icpNumber }}
+              </a>
+            </template>
+            <!-- 访问其他域名时只显示GitHub信息 -->
+            <template v-else>
+              开源项目 · 
+              <a 
+                href="https://github.com/yaoyaochil/yaoyao-nav" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                class="footer-link"
+              >
+                GitHub
+              </a>
+            </template>
           </template>
-          <!-- 非大陆域名显示GitHub信息 -->
+          <!-- 未同时设置备案号和大陆域名时的默认显示 -->
           <template v-else>
             开源项目 · 
             <a 
@@ -109,6 +121,16 @@
               class="footer-link"
             >
               GitHub
+            </a>
+            <span v-if="icpNumber" class="footer-separator"> | </span>
+            <a 
+              v-if="icpNumber"
+              href="https://beian.miit.gov.cn/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              class="footer-link beian-link"
+            >
+              {{ icpNumber }}
             </a>
           </template>
         </p>
