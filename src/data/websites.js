@@ -12,14 +12,6 @@ export const websites = [
     description: '在线文件转换工具，支持300多种格式互相转换，简单易用'
   },
   {
-    id: 2,
-    name: 'Noteably',
-    url: 'https://noteably.com',
-    icon: 'https://noteably.com/favicon.ico',
-    category: '实用工具',
-    description: '在线笔记工具，支持多设备同步，轻松记录和管理笔记'
-  },
-  {
     id: 3,
     name: 'Convert cURL',
     url: 'https://curlconverter.com',
@@ -31,7 +23,7 @@ export const websites = [
     id: 4,
     name: 'Supervisor',
     url: 'https://supervisord.org',
-    icon: 'https://supervisord.org/favicon.ico',
+    icon: 'https://www.google.com/s2/favicons?domain=supervisord.org&sz=32',
     category: '实用工具',
     description: '进程监控和管理工具，确保服务稳定运行'
   },
@@ -39,7 +31,7 @@ export const websites = [
     id: 5,
     name: 'SonarQube',
     url: 'https://www.sonarqube.org',
-    icon: 'https://www.sonarqube.org/favicon.ico',
+    icon: 'https://www.google.com/s2/favicons?domain=www.sonarqube.org&sz=32',
     category: '实用工具',
     description: '代码质量检测平台，持续检查代码质量和安全性'
   },
@@ -55,7 +47,7 @@ export const websites = [
     id: 7,
     name: 'UPX',
     url: 'https://upx.github.io',
-    icon: 'https://upx.github.io/favicon.ico',
+    icon: 'https://www.google.com/s2/favicons?domain=upx.github.io&sz=32',
     category: '实用工具',
     description: '可执行文件压缩工具，减小程序体积'
   },
@@ -63,7 +55,7 @@ export const websites = [
     id: 8,
     name: 'Sentry',
     url: 'https://sentry.io',
-    icon: 'https://sentry.io/favicon.ico',
+    icon: 'https://www.google.com/s2/favicons?domain=sentry.io&sz=32',
     category: '实用工具',
     description: '应用性能监控和错误追踪平台，提升应用稳定性'
   },
@@ -104,7 +96,7 @@ export const websites = [
     id: 13,
     name: 'Golang',
     url: 'https://golang.org',
-    icon: 'https://golang.org/favicon.ico',
+    icon: 'https://www.google.com/s2/favicons?domain=golang.org&sz=32',
     category: 'WEB开发',
     description: 'Google开发的编程语言，简洁高效的系统编程'
   },
@@ -112,7 +104,7 @@ export const websites = [
     id: 14,
     name: 'Flutter',
     url: 'https://flutter.dev',
-    icon: 'https://flutter.dev/favicon.ico',
+    icon: 'https://www.google.com/s2/favicons?domain=flutter.dev&sz=32',
     category: 'WEB开发',
     description: 'Google的UI工具包，构建跨平台应用'
   },
@@ -125,44 +117,12 @@ export const websites = [
     description: '简洁优雅的编程语言，广泛应用于各个领域'
   },
   {
-    id: 16,
-    name: '社区工具',
-    url: 'https://community.tools',
-    icon: 'https://community.tools/favicon.ico',
-    category: 'WEB开发',
-    description: '开发者社区工具集合，提升开发效率'
-  },
-  {
     id: 17,
     name: 'Design',
     url: 'https://design.com',
-    icon: 'https://design.com/favicon.ico',
+    icon: 'https://www.google.com/s2/favicons?domain=design.com&sz=32',
     category: 'WEB开发',
     description: '在线设计工具，快速创建专业设计'
-  },
-  {
-    id: 18,
-    name: '学习工具',
-    url: 'https://learn.tools',
-    icon: 'https://learn.tools/favicon.ico',
-    category: 'WEB开发',
-    description: '编程学习资源平台，提升技能水平'
-  },
-  {
-    id: 19,
-    name: '网络安全',
-    url: 'https://security.tools',
-    icon: 'https://security.tools/favicon.ico',
-    category: 'WEB开发',
-    description: '网络安全工具和资源，保护应用安全'
-  },
-  {
-    id: 20,
-    name: '博客系统',
-    url: 'https://blog.tools',
-    icon: 'https://blog.tools/favicon.ico',
-    category: 'WEB开发',
-    description: '博客搭建和管理工具，分享技术心得'
   },
   // 搜索引擎
   {
