@@ -85,9 +85,11 @@
     <footer class="footer">
       <div class="footer-content">
         <p class="footer-text">
-          <!-- 大陆域名只显示备案信息 -->
-          <template v-if="isMainlandDomain && icpNumber">
+          <!-- 大陆域名访问时的显示逻辑 -->
+          <template v-if="isMainlandDomain">
+            <!-- 如果有备案号则显示备案信息 -->
             <a 
+              v-if="icpNumber"
               href="https://beian.miit.gov.cn/" 
               target="_blank" 
               rel="noopener noreferrer"
@@ -95,6 +97,7 @@
             >
               {{ icpNumber }}
             </a>
+            <!-- 没有备案号时不显示任何内容 -->
           </template>
           <!-- 非大陆域名显示GitHub信息 -->
           <template v-else>
